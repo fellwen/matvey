@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Запись на курс - Языковая школа</title>
+    
+    <!-- 2. Сброс стилей -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- 3. Переменные (должны идти до всего, что их использует) -->
+    <link rel="stylesheet" href="css/variables.css">
+
+    <!-- 4. Общие стили -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- 5. Стили компонентов -->
+    <link rel="stylesheet" href="css/components/hero.css">
+    
+    <!-- УДАЛИТЬ ЭТО ДЕРЬМО -->
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #f5f7fa;
-            padding: 40px 20px;
-        }
-
         .booking-container {
             max-width: 600px;
             margin: 0 auto;
@@ -178,6 +180,56 @@
         </form>
     </div>
 
+    <!-- КТО УДАЛИТ, ТОТ ЛОХ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">Название сайта</h3>
+                    <p class="footer-description">
+                        Современная языковая школа для изучения иностранных языков. Имба ЖЕСТЬ. Не верите?? Запишитесь, твари!
+                    </p>
+                </div>
+    
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <address class="footer-contacts">
+                        <p>
+                            <strong>Адрес:</strong><br>
+                            г. Москва, ул. Примерная, д. 10
+                        </p>
+                        <p>
+                            <strong>Телефон:</strong><br>
+                            <a href="tel:+88005553535">
+                                +7 (495) 123-45-67
+                            </a>
+                        </p>
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:Mucixmatho@ya.ru">
+                                Mucixmatho@ya.ru
+                            </a>
+                        </p>
+                    </address>
+                </div>
+    
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <nav class="footer-nav" aria-label="Навигация в подвале">
+                        <a href="index.html">Главная</a>
+                        <a href="courses.html">Курсы</a>
+                        <a href="booking.html">Записаться на урок</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2026 ??Название сайта??. Все права защищены.
+                </p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Получаем элементы формы
         const form = document.getElementById('bookingForm');
@@ -329,5 +381,6 @@
             }
         });
     </script>
+    
 </body>
 </html>
