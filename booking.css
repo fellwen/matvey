@@ -1,0 +1,346 @@
+/* =========================================
+   1. VARIABLES (css/variables.css)
+   ========================================= */
+:root {
+  /* Основная палитра: "Академический современный" */
+  --color-primary: #2A5B59;       /* Глубокий изумрудный (доверие, обучение) */
+  --color-primary-hover: #1F4543;
+  --color-accent: #D97757;        /* Теплый терракотовый (энергия, внимание) */
+  --color-accent-hover: #C46A4A;
+  
+  /* Нейтральные цвета */
+  --color-bg: #F9F8F6;            /* Теплый алебастр (не режет глаз, как #FFF) */
+  --color-surface: #FFFFFF;
+  --color-text: #2D2D2D;          /* Мягкий черный */
+  --color-text-muted: #6B7280;
+  --color-border: #D1D5DB;
+  --color-border-focus: #2A5B59;
+  
+  /* Типографика */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  
+  /* Отступы и скругления */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+  
+  /* Сетка */
+  --container-max-width: 1140px;
+  --spacing-xs: 0.5rem;   /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2.5rem;   /* 40px */
+  --spacing-xl: 4rem;     /* 64px */
+}
+
+/* =========================================
+   2. RESET & BASE (css/reset.css + main.css)
+   ========================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Прижимает футер к низу при малом контенте */
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* =========================================
+   3. BOOKING SECTION (main.css)
+   ========================================= */
+.booking {
+  padding: var(--spacing-xl) 0;
+}
+
+.booking__title {
+  font-size: 2.25rem; /* 36px */
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary);
+}
+
+.booking__subtitle {
+  font-size: 1.125rem; /* 18px */
+  text-align: center;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-lg);
+}
+
+/* =========================================
+   4. FORMS (css/components/forms.css)
+   ========================================= */
+.booking-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background-color: var(--color-surface);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="tel"],
+.booking-form input[type="email"],
+.booking-form select {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none; /* Убирает стандартные стили браузера для select */
+}
+
+/* Кастомная стрелка для select */
+.booking-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236B7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(42, 91, 89, 0.15); /* Мягкое свечение цвета primary */
+}
+
+.booking-form input::placeholder {
+  color: #9CA3AF;
+}
+
+/* Стили для чекбокса */
+.booking-form label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.booking-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-primary); /* Современный способ стилизации чекбокса */
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   5. BUTTONS (css/components/buttons.css)
+   ========================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  width: 100%;
+  margin-top: var(--spacing-xs);
+}
+
+.btn--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn--primary:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+  box-shadow: none;
+}
+
+/* =========================================
+   6. FOOTER (footer styles)
+   ========================================= */
+.footer {
+  background-color: #1F2937; /* Глубокий графитовый, не чисто черный */
+  color: #E5E7EB;
+  padding: var(--spacing-xl) 0 var(--spacing-md);
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.footer-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.02em;
+}
+
+.footer-description {
+  font-size: 0.95rem;
+  color: #9CA3AF;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.footer-contacts p {
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.95rem;
+  color: #D1D5DB;
+}
+
+.footer-contacts strong {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.footer-contacts a {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.footer-contacts a:hover {
+  color: #E09F3E; /* Чуть светлее при наведении */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav a {
+  color: #D1D5DB;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: #FFFFFF;
+  padding-left: 4px; /* Микро-анимация сдвига */
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: var(--spacing-md);
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+/* =========================================
+   7. RESPONSIVE (Адаптивность)
+   ========================================= */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 2.5rem;
+    --spacing-lg: 1.5rem;
+  }
+
+  .booking__title {
+    font-size: 1.75rem; /* 28px */
+  }
+
+  .booking-form {
+    padding: var(--spacing-md);
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .footer-description {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer-nav {
+    align-items: center;
+  }
+  
+  .footer-contacts p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booking__title {
+    font-size: 1.5rem;
+  }
+  
+  .booking__subtitle {
+    font-size: 1rem;
+  }
+}
