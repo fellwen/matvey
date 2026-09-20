@@ -356,7 +356,7 @@ main {
 /* ===== СЕКЦИЯ КУРСОВ (общий каркас) ===== */
 .courses {
     padding: var(--space-2xl) 0;
-    background-color: var(--color-bg-main);
+  /*  background-color: var(--color-bg-main); */
 }
 
 /* ===== СЕТКА (общий паттерн для карточек) ===== */
