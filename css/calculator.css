@@ -86,7 +86,7 @@
 
 .calculator__result #total-price {
     font-size: var(--font-size-2xl);
-    color: var(--color-primary);
+    color: transparent;
 }
 
 /* Адаптив */
