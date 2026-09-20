@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы — Lingua</title>
+    <title>Курсы — Языковая школа</title>
 
     <!-- Общие стили проекта: эти файлы уже должны быть в общем репозитории -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/gradient.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/cards.css">
     <link rel="stylesheet" href="css/calculator.css">
 </head>
 
-<body>
+<body class="gradient-bg">
     <main>
         <section class="courses">
             <div class="container">
@@ -88,9 +90,7 @@
                                 Английский для бизнеса
                             </h2>
                             <p class="course-card__description">
-                                Деловая переписка, переговоры, презентации и
-08:53
-профессиональная коммуникация на английском.
+                                Деловая переписка, переговоры, презентации и профессиональная коммуникация на английском.
                             </p>
                             <p class="course-card__price">от 6 400 ₽/мес.</p>
                         </div>
@@ -127,7 +127,7 @@
                         </div>
                     </form>
 
-                    <!-- Блок вывода результата (сюда будет писать Валерий №12) -->
+                    <!-- Блок вывода результата (Валерий №12) -->
                     <div class="calculator__result">
                         Итоговая стоимость: <span id="total-price">0</span> ₽
                     </div>
@@ -135,7 +135,9 @@
             </div>
         </section>
     </main>
+    
     <script src="js/calculator.js"></script>
+    
     <!-- кто удалит тот лох (менять текст можжно)-->
     <footer class="footer">
         <div class="container">
