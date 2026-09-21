@@ -90,7 +90,7 @@
     color: transparent;                      /* цифры прозрачные — сквозь них виден градиент */
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.85);  /* тонкий белый контур, чтобы цифры читались */
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-
+}
 /* Адаптив */
 @media (max-width: 768px) {
     .calculator {
