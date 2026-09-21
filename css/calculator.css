@@ -77,17 +77,19 @@
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    color: var(--color-text-main);
-    background-color: var(--color-bg-main);
-    border: 1px solid var(--color-border);
+    background-color: transparent;
+    color: var(--color-text-inverse);       /* подпись «Итоговая стоимость» — белая */
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(4px);              /* лёгкое «стекло» — опционально */
 }
 
 .calculator__result #total-price {
     font-size: var(--font-size-2xl);
-    color: transparent;
-}
+    color: transparent;                      /* цифры прозрачные — сквозь них виден градиент */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.85);  /* тонкий белый контур, чтобы цифры читались */
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
 
 /* Адаптив */
 @media (max-width: 768px) {
