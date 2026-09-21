@@ -4,17 +4,17 @@
 .calculator {
     margin-top: var(--space-3xl);
     padding: var(--space-2xl);
-    background-color: transparent;              /* ← прозрачно, чтобы шёл градиент */
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
-    backdrop-filter: blur(6px);
+    box-shadow: var(--shadow-sm);
 }
 
 .calculator__title {
     text-align: center;
     font-size: var(--font-size-2xl);
     margin-bottom: var(--space-xl);
-    color: var(--color-text-inverse);           /* ← белый, читается на градиенте */
+    color: var(--color-text-main);
 }
 
 .calculator__form {
@@ -35,7 +35,7 @@
     font-family: var(--font-heading);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-inverse);           /* ← белый */
+    color: var(--color-text-main);
 }
 
 .calculator__field input[type="number"],
@@ -44,7 +44,7 @@
     padding: var(--space-sm) var(--space-md);
     font-size: var(--font-size-base);
     color: var(--color-text-main);
-    background-color: var(--color-bg-main);     /* поля оставляем белыми — так читается текст */
+    background-color: var(--color-bg-main);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     transition:
@@ -77,19 +77,17 @@
     font-family: var(--font-heading);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    background-color: transparent;
-    color: var(--color-text-inverse);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    backdrop-filter: blur(4px);
+    box-shadow: var(--shadow-sm);
 }
 
 .calculator__result #total-price {
     font-size: var(--font-size-2xl);
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}                                                
+    color: var(--color-primary);
+}
 
 /* Адаптив */
 @media (max-width: 768px) {
