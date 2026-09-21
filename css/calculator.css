@@ -4,17 +4,17 @@
 .calculator {
     margin-top: var(--space-3xl);
     padding: var(--space-2xl);
-    background-color: var(--color-bg-light);
-    border: 1px solid var(--color-border);
+    background-color: transparent;              /* ← прозрачно, чтобы шёл градиент */
+    border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
+    backdrop-filter: blur(6px);
 }
 
 .calculator__title {
     text-align: center;
     font-size: var(--font-size-2xl);
     margin-bottom: var(--space-xl);
-    color: var(--color-text-main);
+    color: var(--color-text-inverse);           /* ← белый, читается на градиенте */
 }
 
 .calculator__form {
@@ -35,7 +35,7 @@
     font-family: var(--font-heading);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-medium);
-    color: var(--color-text-main);
+    color: var(--color-text-inverse);           /* ← белый */
 }
 
 .calculator__field input[type="number"],
@@ -44,7 +44,7 @@
     padding: var(--space-sm) var(--space-md);
     font-size: var(--font-size-base);
     color: var(--color-text-main);
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-main);     /* поля оставляем белыми — так читается текст */
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     transition:
@@ -78,19 +78,19 @@
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
     background-color: transparent;
-    color: var(--color-text-inverse);       /* подпись «Итоговая стоимость» — белая */
-
+    color: var(--color-text-inverse);
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: var(--radius-md);
-    backdrop-filter: blur(4px);              /* лёгкое «стекло» — опционально */
+    backdrop-filter: blur(4px);
 }
 
 .calculator__result #total-price {
     font-size: var(--font-size-2xl);
-    color: transparent;                      /* цифры прозрачные — сквозь них виден градиент */
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.85);  /* тонкий белый контур, чтобы цифры читались */
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
-}
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}                                                
+
 /* Адаптив */
 @media (max-width: 768px) {
     .calculator {
