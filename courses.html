@@ -3,52 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Курсы — Lingua</title>
+    <title>Курсы — Языковая школа</title>
 
     <!-- Общие стили проекта: эти файлы уже должны быть в общем репозитории -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/gradient.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/cards.css">
     <link rel="stylesheet" href="css/calculator.css">
+
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
 </head>
-
-<body>
+<body class="gradient-bg">
     <header class="header">
-    <div class="container header__container">
-        <a
-            class="header__logo"
-            href="index.html"
-            aria-label="LINGUA — главная страница"
-        >
-            LINGUA
-        </a>
-
-        <nav class="header__nav" aria-label="Основная навигация">
-            <a class="header__link" href="index.html">
-                Главная
-            </a>
-
-            <a class="header__link" href="courses.html">
-                Курсы
-            </a>
-
-            <a
-                class="btn btn--primary header__link--cta"
-                href="booking.html"
+        <div class="container header__container">
+            
+                class="header__logo"
+                href="index.html"
+                aria-label="LINGUA — главная страница"
             >
-                Записаться
+                LINGUA
             </a>
-        </nav>
-    </div>
-</header>
+
+            <nav class="header__nav" aria-label="Основная навигация">
+                <a class="header__link" href="index.html">
+                    Главная
+                </a>
+
+                <a class="header__link" href="courses.html">
+                    Курсы
+                </a>
+
+                
+                    class="btn btn--primary header__link--cta"
+                    href="booking.html"
+                >
+                    Записаться
+                </a>
+            </nav>
+        </div>
+    </header>
     <main>
         <section class="courses">
             <div class="container">
                 <div class="section-heading">
-                    <span class="section-heading__label">LINGUA</span>
+                    <span class="section-heading__label">Языковая школа</span>
                     <h1 class="section-heading__title">Наши курсы</h1>
-                    <p class="section-heading__text">
-                        Выберите программу обучения под свою цель и уровень языка.
+                    <p class="section-heading__text" style="color: #ffffff">
+                        Выберите программу обучения под свою цель и уровень языка
                     </p>
                 </div>
 
@@ -57,78 +61,122 @@
 
                     <article class="course-card">
                         <div class="course-card__image course-card__image--english">
-                            <span>ENGLISH</span>
+                            <span>🇬🇧</span>
                         </div>
-
                         <div class="course-card__content">
-                            <h2 class="course-card__title">
-                                Английский для начинающих
-                            </h2>
+                            <h2 class="course-card__title">Английский</h2>
                             <p class="course-card__description">
-                                Изучение английского с нуля: базовая грамматика,
-                                словарный запас и разговорная практика.
+                                От базовой грамматики до свободного общения.
+                                Программа подбирается под ваш уровень.
                             </p>
-                            <p class="course-card__price">от 4 900 ₽/мес.</p>
+                            <p class="course-card__price">Уровни A1 — C2</p>
                         </div>
                     </article>
 
                     <article class="course-card">
-                        <div class="course-card__image course-card__image--speaking">
-                            <span>SPEAK</span>
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇩🇪</span>
                         </div>
-
                         <div class="course-card__content">
-                            <h2 class="course-card__title">
-                                Разговорный клуб
-                            </h2>
+                            <h2 class="course-card__title">Немецкий</h2>
                             <p class="course-card__description">
-                                Практика живого общения, расширение словарного
-                                запаса и развитие уверенности в разговоре.
+                                Грамматика, произношение и разговорная практика
+                                с носителями языка.
                             </p>
-                            <p class="course-card__price">от 2 900 ₽/мес.</p>
+                            <p class="course-card__price">Уровни A1 — C1</p>
                         </div>
                     </article>
 
                     <article class="course-card">
-                        <div class="course-card__image course-card__image--ielts">
-                            <span>IELTS</span>
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇫🇷</span>
                         </div>
-
                         <div class="course-card__content">
-                            <h2 class="course-card__title">
-                                Подготовка к IELTS
-                            </h2>
+                            <h2 class="course-card__title">Французский</h2>
                             <p class="course-card__description">
-                                Подготовка к экзамену IELTS: Reading, Listening,
-                                Writing и Speaking с практическими заданиями.
+                                Живой французский для путешествий, работы
+                                и повседневного общения.
                             </p>
-                            <p class="course-card__price">от 7 900 ₽/мес.</p>
+                            <p class="course-card__price">Уровни A1 — C1</p>
                         </div>
                     </article>
 
                     <article class="course-card">
-                        <div class="course-card__image course-card__image--business">
-                            <span>BUSINESS</span>
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇪🇸</span>
                         </div>
-
                         <div class="course-card__content">
-                            <h2 class="course-card__title">
-                                Английский для бизнеса
-                            </h2>
+                            <h2 class="course-card__title">Испанский</h2>
                             <p class="course-card__description">
-                                Деловая переписка, переговоры, презентации и
-08:53
-профессиональная коммуникация на английском.
+                                Быстрый старт в испанском: от приветствия
+                                до уверенных диалогов.
                             </p>
-                            <p class="course-card__price">от 6 400 ₽/мес.</p>
+                            <p class="course-card__price">Уровни A1 — C1</p>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇮🇹</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h2 class="course-card__title">Итальянский</h2>
+                            <p class="course-card__description">
+                                Мелодичный итальянский с упором на разговор
+                                и понимание на слух.
+                            </p>
+                            <p class="course-card__price">Уровни A1 — B2</p>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇨🇳</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h2 class="course-card__title">Китайский</h2>
+                            <p class="course-card__description">
+                                Тоны, иероглифика и разговорная практика
+                                по системе HSK.
+                            </p>
+                            <p class="course-card__price">HSK 1 — 5</p>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇯🇵</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h2 class="course-card__title">Японский</h2>
+                            <p class="course-card__description">
+                                Хирагана, катакана, кандзи и разговорный
+                                японский для повседневной жизни.
+                            </p>
+                            <p class="course-card__price">N5 — N3</p>
+                        </div>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-card__image course-card__image--english">
+                            <span>🇷🇺</span>
+                        </div>
+                        <div class="course-card__content">
+                            <h2 class="course-card__title">Русский как иностранный</h2>
+                            <p class="course-card__description">
+                                Русский для иностранцев: алфавит, грамматика
+                                и живая речь.
+                            </p>
+                            <p class="course-card__price">Уровни A1 — C1</p>
                         </div>
                     </article>
 
                 </div>
+
                 <!-- КАЛЬКУЛЯТОР ЧАСТЬ №11 -->
                 <div class="calculator">
                     <h2 class="calculator__title">Рассчитать стоимость обучения</h2>
-                    
+
                     <form class="calculator__form" id="calc-form">
                         <!-- Поле: Количество занятий -->
                         <div class="calculator__field">
@@ -149,13 +197,13 @@
                         <!-- Поле: Тариф (радиокнопки) -->
                         <div class="calculator__field">
                             <span>Тариф:</span>
-                            <label> <input type="radio" name="tariff" value="1.0" checked> Выгодный </label>
-                            <label> <input type="radio" name="tariff" value="1.2"> Комфортный </label>
-                            <label> <input type="radio" name="tariff" value="1.5"> Усиленный </label>
+                            <label><input type="radio" name="tariff" value="1.0" checked> Выгодный</label>
+                            <label><input type="radio" name="tariff" value="1.2"> Комфортный</label>
+                            <label><input type="radio" name="tariff" value="1.5"> Усиленный</label>
                         </div>
                     </form>
 
-                    <!-- Блок вывода результата (сюда будет писать Валерий №12) -->
+                    <!-- Блок вывода результата (Валерий №12) -->
                     <div class="calculator__result">
                         Итоговая стоимость: <span id="total-price">0</span> ₽
                     </div>
@@ -163,8 +211,10 @@
             </div>
         </section>
     </main>
+
     <script src="js/calculator.js"></script>
-    <!-- кто удалит тот лох (менять текст можжно)-->
+
+    <!-- кто удалит тот лох (менять текст можно)-->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -176,13 +226,13 @@
                 </div>
                 <div class="footer-column">
                     <h3 class="footer-title">Контакты</h3>
-    
+
                     <address class="footer-contacts">
                         <p>
                             <strong>Адрес:</strong><br>
                             г. Москва, ул. Примерная, д. 10
                         </p>
-    
+
                         <p>
                             <strong>Телефон:</strong><br>
                             <a href="tel:+88005553535">
@@ -197,7 +247,7 @@
                         </p>
                     </address>
                 </div>
-    
+
                 <div class="footer-column">
                     <h3 class="footer-title">Навигация</h3>
                     <nav class="footer-nav" aria-label="Навигация в подвале">
@@ -209,7 +259,7 @@
             </div>
             <div class="footer-bottom">
                 <p>
-                    &copy; 2026 ??Название сайта??. Все права защищены.
+                    &copy; 2026 Название сайта. Все права защищены.
                 </p>
             </div>
         </div>
